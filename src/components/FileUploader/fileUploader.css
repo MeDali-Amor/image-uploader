@@ -1,0 +1,84 @@
+.drag-and-drop-box {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    border: 2px dashed var(--border-blue);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-main);
+}
+.drag-and-drop-box input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.drag-and-drop-box:hover,
+.drag-and-drop-box.dragover {
+    opacity: 0.6;
+}
+.drag-and-drop-logo {
+    text-align: center;
+    color: var(--text-gray);
+    font-weight: 600;
+    padding: 10px;
+}
+.drag-and-drop-logo img {
+    width: 70%;
+}
+.files-preview {
+    margin-top: 30px;
+}
+.files-preview p {
+    font-style: 500px;
+}
+.files-preview__title {
+    margin-bottom: 20px;
+}
+.files-preview__item {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    background: var(--bg-main);
+    padding: 15px;
+    border-radius: 20px;
+}
+.files-preview__item img {
+    width: 100px;
+    margin-right: 20px;
+}
+.files-preview__item__info {
+    /* padding: 15px 0; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    justify-content: center;
+    font-size: 14px;
+}
+.files-preview__item__delete {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: rgb(220, 20, 133);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.files-preview__item:hover .files-preview__item__delete {
+    opacity: 1;
+}
